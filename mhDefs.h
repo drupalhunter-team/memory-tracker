@@ -8,12 +8,19 @@ typedef struct {
   void *addr;
   int   size;
   char  tag[MAX_STR];
-} BlockType;
+}BlockType;
+
+typedef struct node{
+ struct node *next;
+ BlockType *data;
+}BlockNode;
 
 typedef struct {
   int numBlocks;
-  BlockType *blocks;
-} HeapType;
+  BlockNode *head;
+}HeapType;
+
+
 
 void  mh_init(HeapType*);
 void  mh_cleanup(HeapType*);
@@ -22,3 +29,4 @@ void  mh_dealloc(HeapType*, void*);
 int   mh_count(HeapType*);
 void  mh_dump(HeapType*);
 void  mh_collect(HeapType*);
+

@@ -9,3 +9,15 @@ typedef struct {
   char       stuNumber[12];
   float      gpa;
 } StudentType;
+
+typedef struct{
+  PersonType basicInfo;
+  int age;
+}SupermanType;
+
+typedef struct{
+  PersonType basicInfo;
+  float age;
+}SpiderType;
+  
+
